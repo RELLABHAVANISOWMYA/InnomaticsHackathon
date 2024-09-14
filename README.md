@@ -1,2 +1,69 @@
-# InnomaticsHackathon
-Country Search Bar  An intuitive search bar that allows users to quickly search for countries by name or capital. Featuring real-time suggestions and autocomplete, it provides a seamless user experience. The search bar is prominently displayed on the homepage with a clean, visually appealing UI for efficient data exploration.
+# 🌍 **Country Search Bar**
+
+Welcome to the **Country Search Bar** project! 🌟  
+A sleek, user-friendly tool designed to help you search for countries by their **name** or **capital**. Whether you're exploring the globe or learning geography, this search bar makes it simple and fun! 🌐
+
+---
+
+## 🎯 **Features**
+
+- 🔍 **Dynamic Search**: Instantly find countries by typing their name or capital.
+- ✨ **Autocomplete Suggestions**: Enjoy real-time suggestions that appear as you type.
+- 🖼️ **Clean and Attractive UI**: A visually appealing interface that enhances user experience.
+- ⚡ **Fast and Efficient**: Optimized for quick searches and smooth functionality.
+
+---
+
+## 🚀 **Getting Started**
+
+### 1. Clone the repository:
+```bash
+git clone https://github.com/your-username/country-search-bar.git
+```
+
+### 2. Install the dependencies:
+```bash
+npm install
+```
+
+### 3. Start the application:
+```bash
+npm start
+```
+
+Your app will be running at:  
+📍 **Local**: `http://localhost:3000`  
+📡 **Network**: `http://<your-ip>:3000`
+
+---
+
+## 🛠️ **Tech Stack**
+
+- **Frontend**: React ⚛️
+- **Backend**: Node.js 🌿
+- **Dependencies**: Axios 🌐, Lucide-React 🎨
+- **Styling**: CSS 🎨
+
+---
+
+## 💡 **How It Works**
+
+1. Start typing in the search bar.
+2. Get instant suggestions based on country names or capitals.
+3. Click a suggestion to explore that country!
+
+---
+
+## 🧑‍💻 **Contributing**
+
+Feel free to contribute! Open a pull request or report an issue. Let's make this search bar even better together! 🛠️
+
+---
+
+## 📜 **License**
+
+This project is licensed under the MIT License.
+
+---
+
+**Happy searching!** 🌏✨  
