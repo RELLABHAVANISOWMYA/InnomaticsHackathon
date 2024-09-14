@@ -1,9 +1,4 @@
-It looks like there's a merge conflict in the `README.md` file between the default `Create React App` content and your custom content for the **Country Search Bar** project. To resolve this conflict and push your code, follow these steps:
 
-### Step 1: Choose the desired content
-Since you’ve customized the `README.md` file with details about your **Country Search Bar** project, you'll want to keep that and remove the default `Create React App` content. The correct content should be:
-
-```md
 # 🌍 **Country Search Bar**
 
 Welcome to the **Country Search Bar** project! 🌟  
