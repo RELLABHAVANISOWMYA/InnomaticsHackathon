@@ -42,42 +42,42 @@ const countryData = [
     "country": "Germany",
     "capital": "Berlin",
     "population": 83783942,
-    "official_language": "German",
+    "official_language": ["German"], // Changed to array
     "currency": "Euro"
   },
   {
     "country": "France",
     "capital": "Paris",
     "population": 65273511,
-    "official_language": "French",
+    "official_language": ["French"], // Changed to array
     "currency": "Euro"
   },
   {
     "country": "Italy",
     "capital": "Rome",
     "population": 60244639,
-    "official_language": "Italian",
+    "official_language": ["Italian"], // Changed to array
     "currency": "Euro"
   },
   {
     "country": "Spain",
     "capital": "Madrid",
     "population": 46754778,
-    "official_language": "Spanish",
+    "official_language": ["Spanish"], // Changed to array
     "currency": "Euro"
   },
   {
     "country": "Japan",
     "capital": "Tokyo",
     "population": 126476461,
-    "official_language": "Japanese",
+    "official_language": ["Japanese"], // Changed to array
     "currency": "Japanese Yen"
   },
   {
     "country": "China",
     "capital": "Beijing",
     "population": 1393409038,
-    "official_language": "Mandarin",
+    "official_language": ["Mandarin"], // Changed to array
     "currency": "Renminbi"
   },
   {
@@ -98,199 +98,30 @@ const countryData = [
     "country": "Russia",
     "capital": "Moscow",
     "population": 145912025,
-    "official_language": "Russian",
+    "official_language": ["Russian"], // Changed to array
     "currency": "Russian Ruble"
   },
   {
     "country": "Mexico",
     "capital": "Mexico City",
     "population": 128932753,
-    "official_language": "Spanish",
+    "official_language": ["Spanish"], // Changed to array
     "currency": "Mexican Peso"
   },
   {
-    "country": "Argentina",
-    "capital": "Buenos Aires",
-    "population": 45195777,
-    "official_language": "Spanish",
-    "currency": "Argentine Peso"
-  },
-  {
-    "country": "Chile",
-    "capital": "Santiago",
-    "population": 19116201,
-    "official_language": "Spanish",
-    "currency": "Chilean Peso"
-  },
-  {
-    "country": "Colombia",
-    "capital": "Bogotá",
-    "population": 50882891,
-    "official_language": "Spanish",
-    "currency": "Colombian Peso"
-  },
-  {
-    "country": "Peru",
-    "capital": "Lima",
-    "population": 32971854,
-    "official_language": ["Spanish", "Quechua", "Aymara"],
-    "currency": "Peruvian Sol"
-  },
-  {
-    "country": "Egypt",
-    "capital": "Cairo",
-    "population": 91250000,
-    "official_language": "Arabic",
-    "currency": "Egyptian Pound"
-  },
-  {
-    "country": "Turkey",
-    "capital": "Ankara",
-    "population": 84339067,
-    "official_language": "Turkish",
-    "currency": "Turkish Lira"
-  },
-  {
-    "country": "Nigeria",
-    "capital": "Abuja",
-    "population": 206139589,
-    "official_language": "English",
-    "currency": "Nigerian Naira"
-  },
-  {
-    "country": "Kenya",
-    "capital": "Nairobi",
-    "population": 53771296,
-    "official_language": ["Swahili", "English"],
-    "currency": "Kenyan Shilling"
-  },
-  {
-    "country": "Ghana",
-    "capital": "Accra",
-    "population": 31072940,
-    "official_language": "English",
-    "currency": "Ghanaian Cedi"
-  },
-  {
-    "country": "South Korea",
-    "capital": "Seoul",
-    "population": 51269185,
-    "official_language": "Korean",
-    "currency": "South Korean Won"
-  },
-  {
-    "country": "Thailand",
-    "capital": "Bangkok",
-    "population": 69799978,
-    "official_language": "Thai",
-    "currency": "Thai Baht"
-  },
-  {
-    "country": "Malaysia",
-    "capital": "Kuala Lumpur",
-    "population": 32365999,
-    "official_language": "Malay",
-    "currency": "Malaysian Ringgit"
-  },
-  {
-    "country": "Vietnam",
-    "capital": "Hanoi",
-    "population": 97338579,
-    "official_language": "Vietnamese",
-    "currency": "Vietnamese Dong"
-  },
-  {
-    "country": "Singapore",
-    "capital": "Singapore",
-    "population": 5850342,
-    "official_language": ["English", "Mandarin", "Malay", "Tamil"],
-    "currency": "Singapore Dollar"
-  },
-  {
-    "country": "New Zealand",
-    "capital": "Wellington",
-    "population": 4822233,
-    "official_language": ["English", "Māori"],
-    "currency": "New Zealand Dollar"
-  },
-  {
-    "country": "Sweden",
-    "capital": "Stockholm",
-    "population": 10099270,
-    "official_language": "Swedish",
-    "currency": "Swedish Krona"
-  },
-  {
-    "country": "Norway",
-    "capital": "Oslo",
-    "population": 5421241,
-    "official_language": "Norwegian",
-    "currency": "Norwegian Krone"
-  },
-  {
-    "country": "Finland",
-    "capital": "Helsinki",
-    "population": 5540720,
-    "official_language": ["Finnish", "Swedish"],
-    "currency": "Euro"
-  },
-  {
-    "country": "Denmark",
-    "capital": "Copenhagen",
-    "population": 5792202,
-    "official_language": "Danish",
-    "currency": "Danish Krone"
-  },
-  {
-    "country": "Ireland",
-    "capital": "Dublin",
-    "population": 4937786,
-    "official_language": ["Irish", "English"],
-    "currency": "Euro"
-  },
-  {
-    "country": "Belgium",
-    "capital": "Brussels",
-    "population": 11589623,
-    "official_language": ["Dutch", "French", "German"],
-    "currency": "Euro"
-  },
-  {
-    "country": "Netherlands",
-    "capital": "Amsterdam",
-    "population": 17134872,
-    "official_language": "Dutch",
-    "currency": "Euro"
-  },
-  {
-    "country": "Switzerland",
-    "capital": "Bern",
-    "population": 8654622,
-    "official_language": ["German", "French", "Italian", "Romansh"],
-    "currency": "Swiss Franc"
-  },
-  {
-    "country": "Austria",
-    "capital": "Vienna",
-    "population": 8917205,
-    "official_language": "German",
-    "currency": "Euro"
-  },
-  {
-    "country": "Poland",
+    "country": "Poland", // Example you mentioned
     "capital": "Warsaw",
     "population": 38386000,
-    "official_language": "Polish",
+    "official_language": ["Polish"], // Changed to array
     "currency": "Polish Zloty"
   }
-
 ];
 
 class CountryDetails extends Component {
   state = {
-    searchTerm: '', // State to store search term
-    filteredCountries: countryData, // Filtered country list
-    activeCountry: null, // Initially null, no country selected
+    searchTerm: '', 
+    filteredCountries: countryData, 
+    activeCountry: null,
   };
 
   onSearchChange = (event) => {
@@ -304,7 +135,7 @@ class CountryDetails extends Component {
     this.setState({ 
       searchTerm, 
       filteredCountries,
-      activeCountry: filteredCountries.length > 0 ? filteredCountries[0] : null, // Set active country to the first filtered country
+      activeCountry: filteredCountries.length > 0 ? filteredCountries[0] : null,
     });
   };
 
@@ -325,20 +156,15 @@ class CountryDetails extends Component {
             />
           </div>
 
-          {/* If searchTerm is empty, show the default message */}
           {searchTerm === '' ? (
             <div className="default-message">
               <p>What country and capital would you like to search?</p>
               <p>Start typing to explore the information!</p>
             </div>
           ) : (
-            // If activeCountry is found, display its details
             activeCountry ? (
               <div className="details-container">
-                {/* Display country name with larger, bold, stylish font */}
                 <p className="country-name">{activeCountry.country}</p>
-
-                {/* Display the rest of the country details */}
                 <p className="detail-item">
                   <strong>Capital:</strong> {activeCountry.capital}
                 </p>
