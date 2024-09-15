@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './index.css';
 
 // JSON Data
-const countryData = [
+const countryData = [ 
     {
       "country": "United States",
       "capital": "Washington, D.C.",
@@ -283,33 +283,32 @@ const countryData = [
       "official_language": "Polish",
       "currency": "Polish Zloty"
     }
-  
-];
+   ];
 
 class CountryDetails extends Component {
   state = {
-    searchTerm: '', 
-    filteredCountries: countryData, 
-    activeCountry: null,
+    searchTerm: '',
+    filteredCountries: countryData,
   };
 
   onSearchChange = (event) => {
     const searchTerm = event.target.value.toLowerCase();
 
     // Filter countries based on the search term
-    const filteredCountries = countryData.filter(country =>
-      country.country.toLowerCase().includes(searchTerm)
+    const filteredCountries = countryData.filter((country) =>
+      country.country.toLowerCase().includes(searchTerm) ||
+      country.capital.toLowerCase().includes(searchTerm)
     );
-    
-    this.setState({ 
-      searchTerm, 
+
+    // Update the state with the filtered countries
+    this.setState({
+      searchTerm,
       filteredCountries,
-      activeCountry: filteredCountries.length > 0 ? filteredCountries[0] : null,
     });
   };
 
   render() {
-    const { searchTerm, activeCountry } = this.state;
+    const { searchTerm, filteredCountries } = this.state;
 
     return (
       <div className="app-container">
@@ -319,7 +318,7 @@ class CountryDetails extends Component {
             <input
               type="text"
               className="search-input"
-              placeholder="Search for a country..."
+              placeholder="Search for a country or capital..."
               value={searchTerm}
               onChange={this.onSearchChange}
             />
@@ -330,26 +329,31 @@ class CountryDetails extends Component {
               <p>What country and capital would you like to search?</p>
               <p>Start typing to explore the information!</p>
             </div>
+          ) : filteredCountries.length > 0 ? (
+            <div className="results-container">
+              {filteredCountries.map((country, index) => (
+                <div key={index} className="details-container">
+                  <p className="country-name">{country.country}</p>
+                  <p className="detail-item">
+                    <strong>Capital:</strong> {country.capital}
+                  </p>
+                  <p className="detail-item">
+                    <strong>Population:</strong> {country.population.toLocaleString()}
+                  </p>
+                  <p className="detail-item">
+                    <strong>Official Languages:</strong>{' '}
+                    {Array.isArray(country.official_language)
+                      ? country.official_language.join(', ')
+                      : country.official_language}
+                  </p>
+                  <p className="detail-item">
+                    <strong>Currency:</strong> {country.currency}
+                  </p>
+                </div>
+              ))}
+            </div>
           ) : (
-            activeCountry ? (
-              <div className="details-container">
-                <p className="country-name">{activeCountry.country}</p>
-                <p className="detail-item">
-                  <strong>Capital:</strong> {activeCountry.capital}
-                </p>
-                <p className="detail-item">
-                  <strong>Population:</strong> {activeCountry.population.toLocaleString()}
-                </p>
-                <p className="detail-item">
-                  <strong>Official Languages:</strong> {activeCountry.official_language.join(', ')}
-                </p>
-                <p className="detail-item">
-                  <strong>Currency:</strong> {activeCountry.currency}
-                </p>
-              </div>
-            ) : (
-              <p className="no-results">No countries found</p>
-            )
+            <p className="no-results">No countries found</p>
           )}
         </div>
       </div>
